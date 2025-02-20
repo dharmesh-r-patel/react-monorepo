@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+        - main      
   workflow_dispatch:
 
 jobs:
@@ -17,22 +20,31 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
-          registry-url: "https://registry.npmjs.org"
+            node-version: '20.x'
 
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install
+
+      - name: Print current directory
+        run: pwd        
 
       - name: Build Packages
         run: lerna run build --ignore docs
 
       - name: Bump Versions
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          lerna version --yes
+            git config --global user.email "dharmeshbbay@gmail.com"
+            git config --global user.name "Dharmesh Patel"
+            lerna version --yes
+
+      - name: Authenticate npm
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
+      - name: Verify npm authentication
+        run: npm whoami
+
 
       - name: Publish to NPM
         run: lerna publish from-package --yes
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
