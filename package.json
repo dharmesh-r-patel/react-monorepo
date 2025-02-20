@@ -1,0 +1,26 @@
+{
+  "name": "react-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "lerna run build",
+    "build:public": "lerna run --no-private build",
+    "release:version": "lerna version --no-changelog --no-push --no-git-tag-version --no-private --force-publish=@react-monorepo/core-downloads-tracker",
+    "release:build": "lerna run --concurrency 8 --no-private build --skip-nx-cache",
+    "lint": "yarn workspaces foreach --all --exclude . run lint",
+    "clean": "rm -rf yarn.lock .pnp.cjs .pnp.loader.mjs node_modules/ packages/*/node_modules packages/*/dist"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-replace": "^6.0.2",
+    "@types/react": "^19.0.8",
+    "lerna": "^8.1.9",
+    "rollup-plugin-preserve-directives": "^0.4.0"
+  },
+  "packageManager": "yarn@4.6.0"
+}

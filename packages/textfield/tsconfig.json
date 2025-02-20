@@ -1,0 +1,96 @@
+{
+  "extends": "../../tsconfig.json",
+  "exclude": [
+      "node_modules",
+      "build",
+      "**/__tests__/*",
+      "jest.setup.tsx",
+      "dev",
+      "types",
+      "dev/examples.framer",
+      "test",
+      "skins",
+      "dist",
+      "temp",
+      "api",
+      "cypress"
+  ],
+  "compilerOptions": {
+      "paths": {
+        "@react-monorepo/hooks": ["../hooks/src"],
+        "@react-monorepo/hooks/*": ["../hooks/src/*"]
+    }
+  }
+}
+
+// {
+//   "compilerOptions": {
+//     "module": "ESNext",
+//     "target": "ESNext",
+//     "lib": ["DOM", "ESNext"],
+//     "jsx": "react-jsx",
+//     "declaration": true,
+//     "outDir": "dist",
+//     "moduleResolution": "Bundler",
+//     "esModuleInterop": true,
+//     "skipLibCheck": true,
+//     "paths": {
+//       "@react-monorepo/hooks": ["../hooks/src"],
+//       "@react-monorepo/hooks/*": ["../hooks/src/*"]
+//     }
+//   },
+//   "include": ["src"]
+// }
+
+// {
+//   // This config is for emitting declarations (.d.ts) only
+//   // Actual .ts source files are transpiled via babel
+//   "extends": "../../tsconfig.json",
+//   "compilerOptions": {
+//     "composite": true,
+//     "declaration": true,
+//     "noEmit": false,
+//     "emitDeclarationOnly": true,
+//     "outDir": "build/esm",
+//     "rootDir": "./src"
+//   },
+//   "include": ["src/**/*", "test/**/*"],
+//   "exclude": ["src/**/*.spec.ts*", "src/**/*.test.ts*"],
+//   "references": [
+//     { "path": "../hooks/tsconfig.json" },
+//   ]
+// }
+
+// {
+//   "extends": "../../tsconfig.json",
+//   "include": ["src/**/*", "test/**/*"],
+//    "compilerOptions": {
+//      "moduleResolution": "Bundler",
+//      "composite": true,
+//      "noEmit": false,
+//    },
+//    "references": [
+//     { "path": "../hooks/tsconfig.json" },
+//   ],
+//   "exclude": ["test/typescript/moduleAugmentation", "src/types/OverridableComponentAugmentation.ts"]
+// }
+
+
+
+// {
+//   "compilerOptions": {
+//     "module": "ESNext",
+//     "target": "ESNext",
+//     "lib": ["DOM", "ESNext"],
+//     "jsx": "react-jsx",
+//     "declaration": true,
+//     "outDir": "dist",
+//     "moduleResolution": "Bundler",
+//     "esModuleInterop": true,
+//     "skipLibCheck": true,
+//     "paths": {
+//       "@react-monorepo/hooks": ["../hooks/src"],
+//     }
+//   },
+//   "include": ["src"]
+// }

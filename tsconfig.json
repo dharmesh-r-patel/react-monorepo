@@ -1,0 +1,130 @@
+{
+  "compilerOptions": {
+      "target": "es2018",
+      "module": "esnext",
+      "moduleResolution": "bundler",
+      "isolatedModules": false,
+      "importHelpers": true,
+      "jsx": "react-jsx",
+      "esModuleInterop": true,
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "declaration": true,
+      "declarationDir": "types",
+      "noLib": false,
+      "preserveConstEnums": true,
+      "sourceMap": true,
+      "strictNullChecks": true,
+      "noImplicitAny": true,
+      "noImplicitThis": true,
+      "noImplicitUseStrict": false,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "removeComments": false,
+      "lib": ["es2017", "dom"],
+      "skipLibCheck": true,
+      "downlevelIteration": true,
+      "stripInternal": true,
+  },
+  "compileOnSave": false,
+  "buildOnSave": false
+}
+
+// {
+//   "compilerOptions": {
+//     "module": "ESNext",
+//     "target": "ESNext",
+//     "lib": ["ESNext", "dom", "dom.iterable"],
+//     "jsx": "react-jsx",
+//     "moduleResolution": "node",
+//     "forceConsistentCasingInFileNames": true,
+//     "strict": true,
+//     "noEmit": true,
+//     "experimentalDecorators": true,
+//     "allowSyntheticDefaultImports": true,
+//     "baseUrl": "./",
+//     "noErrorTruncation": false,
+//     "allowJs": true,
+//     "paths": {
+//       "@react-monorepo/hooks": ["../hooks/src"],
+//       "@react-monorepo/hooks/*": ["../hooks/src/*"]
+//     }
+//   },
+//   "exclude": ["**/.*/", "**/build", "**/node_modules", "docs/export"]
+// }
+
+// {
+//   "compilerOptions": {
+//     "module": "esnext",
+//     // aligning with Node18 recommendation: https://www.npmjs.com/package/@tsconfig/node18
+//     "target": "es2022",
+//     "lib": ["es2020", "dom", "dom.iterable"],
+//     "jsx": "preserve",
+//     "moduleResolution": "node",
+//     "forceConsistentCasingInFileNames": true,
+//     "strict": true,
+//     "noEmit": true,
+//     "experimentalDecorators": true,
+//     "baseUrl": "./",
+//     "allowSyntheticDefaultImports": true,
+//     "noErrorTruncation": false,
+//     "allowJs": true,
+//     "paths": {
+//       "@mui/material": ["./packages/mui-material/src"],
+//       "@mui/material/*": ["./packages/mui-material/src/*"],
+//       "@react-monorepo/hooks": ["./packages/hooks/src"],
+//       "@react-monorepo/hooks/*": ["./packages/hooks/src/*"],
+//     },
+//     // Otherwise we get react-native typings which conflict with dom.lib.
+//     // "types": ["node", "react"]
+//   },
+//   "exclude": ["**/.*/", "**/build", "**/node_modules", "docs/export"]
+// }
+
+// {
+//     "compilerOptions": {
+//       "module": "esnext",
+//       "target": "esnext",
+//       "lib": ["DOM", "ESNext"],
+//       "jsx": "react-jsx",
+//       "moduleResolution": "node",
+//       "forceConsistentCasingInFileNames": true,
+//       "strict": true,
+//       "noEmit": true,
+//       "experimentalDecorators": true,
+//       // "baseUrl": "./",
+//       "allowSyntheticDefaultImports": true,
+//       "noErrorTruncation": false,
+//       "allowJs": true,
+//       "paths": {
+//         "@react-monorepo/hooks": ["../hooks/src"]
+//       }
+//     },
+//     "exclude": ["**/.*/", "**/build", "**/node_modules", "docs/export"]
+//   }
+
+// {
+//   "compilerOptions": {
+//     "module": "ESNext",
+//     "target": "ESNext",
+//     "lib": ["DOM", "ESNext"],
+//     "jsx": "react-jsx",
+//     "moduleResolution": "Bundler",
+//     "forceConsistentCasingInFileNames": true,
+//     "strict": true,
+//     "noEmit": true,
+//     "experimentalDecorators": true,
+//     "allowSyntheticDefaultImports": true,
+//     "baseUrl": "./",
+//     "noErrorTruncation": false,
+//     "allowJs": true,
+//     // "declaration": true,
+//     // "outDir": "dist",
+//     // "esModuleInterop": true,
+//     // "skipLibCheck": true,
+//     "paths": {
+//       "@react-monorepo/hooks": ["./packages/hooks/src"],
+//     }
+//   },
+//   "exclude": ["**/.*/", "**/build", "**/node_modules", "docs/export"]
+// }
