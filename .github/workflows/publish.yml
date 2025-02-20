@@ -33,15 +33,66 @@ jobs:
         run: lerna run build --ignore docs
 
       - name: Authenticate npm
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+        run: |
+                echo "npmRegistryServer: \"https://registry.npmjs.org/\"" >> .yarnrc.yml
+                echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
 
       - name: Verify npm authentication
-        run: npm whoami
+        run: npm whoami || (echo "❌ Authentication failed. Check NPM_TOKEN." && exit 1)
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish to NPM
         run: lerna publish from-package --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+
+# name: Publish Packages
+
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     branches:
+#       - main      
+#   workflow_dispatch:
+
+# jobs:
+#   build-and-publish:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v4
+
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: '20.x'
+#           registry-url: 'https://registry.npmjs.org/'
+
+#       - name: Setup Yarn
+#         run: yarn set version stable
+
+#       - name: Install Dependencies
+#         run: yarn install --immutable
+
+#       - name: Build Packages
+#         run: lerna run build --ignore docs
+
+#       - name: Authenticate npm
+#         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
+#       - name: Verify npm authentication
+#         run: npm whoami
+
+#       - name: Publish to NPM
+#         run: lerna publish from-package --yes
+#         env:
+#           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 
 # name: Publish Packages
