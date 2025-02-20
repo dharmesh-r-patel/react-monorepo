@@ -28,5 +28,9 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "gitHead": "53bd7212af513e6b8d4ce84e12adc64e09b7f09d"
 }
