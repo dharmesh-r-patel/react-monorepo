@@ -40,10 +40,16 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Publish to NPM
-        run: lerna publish from-package --yes --force-publish
+      - name: Publish packages
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+            NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+            yarn publish-packed-packages --tag ${{ contains(steps.get-release-version.outputs.version, '-') && 'next' || 'latest' }}
+
+    #   - name: Publish to NPM
+    #     run: lerna publish from-package --yes --force-publish
+    #     env:
+    #       NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 
 # name: Publish Packages
