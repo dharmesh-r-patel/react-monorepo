@@ -33,12 +33,7 @@ jobs:
         run: lerna run build --ignore docs
 
       - name: Authenticate npm
-        run: |
-                echo "npmRegistryServer: \"https://registry.npmjs.org/\"" >> .yarnrc.yml
-                echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-        env:
-            NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
       - name: Verify npm authentication
         run: npm whoami || (echo "❌ Authentication failed. Check NPM_TOKEN." && exit 1)
