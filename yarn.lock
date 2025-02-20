@@ -1128,7 +1128,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@react-monorepo/hooks@npm:1.0.0, @react-monorepo/hooks@workspace:packages/hooks":
+"@react-monorepo/hooks@workspace:^, @react-monorepo/hooks@workspace:packages/hooks":
   version: 0.0.0-use.local
   resolution: "@react-monorepo/hooks@workspace:packages/hooks"
   dependencies:
@@ -1151,7 +1151,7 @@ __metadata:
     "@emotion/react": "npm:^11.14.0"
     "@emotion/styled": "npm:^11.14.0"
     "@mui/material": "npm:^6.4.3"
-    "@react-monorepo/hooks": "npm:1.0.0"
+    "@react-monorepo/hooks": "workspace:^"
     "@rollup/plugin-commonjs": "npm:^28.0.2"
     "@rollup/plugin-node-resolve": "npm:^16.0.0"
     rollup: "npm:^4.34.6"
