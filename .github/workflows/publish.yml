@@ -33,7 +33,7 @@ jobs:
         run: lerna run build --ignore docs
 
       - name: Authenticate npm
-        run: npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
       - name: Verify npm authentication
         run: npm whoami
