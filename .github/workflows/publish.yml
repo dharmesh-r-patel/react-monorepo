@@ -48,7 +48,7 @@ jobs:
             git commit -m "chore: commit changes before publish" || echo "No changes to commit"
 
       - name: Publish to NPM
-        run: lerna publish from-package --yes --force-publish --no-verify-access
+        run: lerna publish from-package --yes --force-publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
