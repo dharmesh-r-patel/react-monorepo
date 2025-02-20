@@ -1,6 +1,6 @@
 {
   "name": "react-monorepo",
-  "private": false,
+  "private": true,
   "workspaces": [
     "packages/*"
   ],

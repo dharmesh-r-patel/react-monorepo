@@ -6,7 +6,7 @@ on:
       - main
   pull_request:
     branches:
-        - main      
+      - main      
   workflow_dispatch:
 
 jobs:
@@ -20,31 +20,74 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-            node-version: '20.x'
+          node-version: '20.x'
+          registry-url: 'https://registry.npmjs.org/'
 
       - name: Install Dependencies
-        run: yarn install --legacy-peer-deps
-
-      - name: Print current directory
-        run: pwd        
+        run: yarn install
 
       - name: Build Packages
         run: lerna run build --ignore docs
 
-      - name: Bump Versions
-        run: |
-            git config --global user.email "dharmeshbbay@gmail.com"
-            git config --global user.name "Dharmesh Patel"
-            lerna version --yes
-
       - name: Authenticate npm
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+        run: npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
 
       - name: Verify npm authentication
         run: npm whoami
-
 
       - name: Publish to NPM
         run: lerna publish from-package --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+
+# name: Publish Packages
+
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     branches:
+#         - main      
+#   workflow_dispatch:
+
+# jobs:
+#   build-and-publish:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v4
+
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#             node-version: '20.x'
+
+#       - name: Install Dependencies
+#         run: yarn install
+
+#       - name: Print current directory
+#         run: pwd        
+
+#       - name: Build Packages
+#         run: lerna run build --ignore docs
+
+#       - name: Bump Versions
+#         run: |
+#             git config --global user.email "dharmeshbbay@gmail.com"
+#             git config --global user.name "Dharmesh Patel"
+#             lerna version --yes
+
+#       - name: Authenticate npm
+#         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
+#       - name: Verify npm authentication
+#         run: npm whoami
+
+
+#       - name: Publish to NPM
+#         run: lerna publish from-package --yes
+#         env:
+#           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
