@@ -11,7 +11,7 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mui/material": "^6.4.3",
-    "@react-monorepo/hooks": "^1.0.0"
+    "@react-monorepo/hooks": "workspace:^"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.2",
@@ -29,5 +29,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "f869be5b44ca840d2d90be4c5c4aeb081b8121ca"
+  "gitHead": "91e9258a415673f7a4a10b26994f37426acfc934"
 }
