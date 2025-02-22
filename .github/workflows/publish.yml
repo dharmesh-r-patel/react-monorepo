@@ -44,6 +44,12 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+
+      - name: Configure Git User
+        run: |
+            git config --global user.name "Dharmesh Patel"
+            git config --global user.email "dharmeshbbay@gmail.com"          
+
       - name: Bump version (if needed)
         run: |
             git fetch --tags
