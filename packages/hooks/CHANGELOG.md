@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/dharmesh-r-patel/react-monorepo/compare/@infineit/react-hooks@1.3.0...@infineit/react-hooks@1.4.0) (2025-02-22)
+
+
+### Features
+
+* add new function 10 ([93f4d16](https://github.com/dharmesh-r-patel/react-monorepo/commit/93f4d16ff5c352d07c37401192eb9f4abb78cb81))
+* add new function 11 ([369c076](https://github.com/dharmesh-r-patel/react-monorepo/commit/369c076feca0aa170954e1aafadc0da7bba65000))
+* add new function 12 ([120b9c5](https://github.com/dharmesh-r-patel/react-monorepo/commit/120b9c5dbe096f0fdcd48a52262c15726a48e66b))
+* add new function 13 ([7b8a81a](https://github.com/dharmesh-r-patel/react-monorepo/commit/7b8a81a2d16e802eaeccb14c7128122a50098abd))
+* add new function 14 ([9212194](https://github.com/dharmesh-r-patel/react-monorepo/commit/9212194915f9d03a15e963c950cc1d0a1234f208))
+
+
+
+
+
 # [1.3.0](https://github.com/dharmesh-r-patel/react-monorepo/compare/@infineit/react-hooks@1.2.0...@infineit/react-hooks@1.3.0) (2025-02-22)
 
 

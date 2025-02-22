@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/dharmesh-r-patel/react-monorepo/compare/@infineit/react-textfield@1.1.2...@infineit/react-textfield@1.1.3) (2025-02-22)
+
+**Note:** Version bump only for package @infineit/react-textfield
+
+
+
+
+
 ## [1.1.2](https://github.com/dharmesh-r-patel/react-monorepo/compare/@infineit/react-textfield@1.1.1...@infineit/react-textfield@1.1.2) (2025-02-22)
 
 **Note:** Version bump only for package @infineit/react-textfield
