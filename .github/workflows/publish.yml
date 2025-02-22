@@ -45,6 +45,21 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+
+      - name: "Version and publish"
+        env:
+            GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+            git config --global user.name "Dharmesh Patel"
+            git config --global user.email "dharmeshbbay@gmail.com"
+    
+            if [ ${{ github.base_ref }} = development ]; then
+              lerna version --conventional-commits --conventional-prerelease --preid beta --yes
+            else
+              lerna version --conventional-commits --conventional-graduate --yes
+            fi
+    
+
       # - name: Configure Git User
       #   run: |
       #     git config --global user.name "Dharmesh Patel"
@@ -67,7 +82,7 @@ jobs:
       #     GH_TOKEN: ${{ secrets.GH_PAT }}
 
       - name: Publish Packages
-        run: lerna publish from-package --yes --force-publish  --loglevel verbose
+        run: lerna publish from-git --yes --loglevel verbose
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
