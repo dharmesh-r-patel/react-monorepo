@@ -48,6 +48,8 @@ jobs:
         run: |
             git fetch --tags
             lerna version patch --yes --no-private --force-publish
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # - name: Bump version (if needed)
       #   run: lerna version patch --yes --no-private --force-publish
