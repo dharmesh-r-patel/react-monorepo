@@ -13,13 +13,13 @@
     "clean": "rm -rf yarn.lock .pnp.cjs .pnp.loader.mjs node_modules/"
   },
   "dependencies": {
+    "conventional-changelog-conventionalcommits": "^8.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-replace": "^6.0.2",
     "@types/react": "^19.0.8",
-    "conventional-changelog-conventionalcommits": "^8.0.0",
     "lerna": "^8.1.9",
     "rollup-plugin-preserve-directives": "^0.4.0"
   },
