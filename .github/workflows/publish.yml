@@ -45,30 +45,16 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      # - name: "Get previous version from npm"
-      #   run: |
-      #      echo "$(npm view your-package-name version)" > .version
-
-      # - name: Get Latest Version from npm
-      #   run: |
-      #     for pkg in $(ls -d packages/*/ | xargs -n1 basename); do
-      #       latest_version=$(npm show @infineit/$pkg version || echo "0.0.0")
-      #       jq --arg version "$latest_version" '.version = $version' packages/$pkg/package.json > packages/$pkg/package.json.tmp
-      #       mv packages/$pkg/package.json.tmp packages/$pkg/package.json
-      #     done   
-      
+    
       - name: Version Packages
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "GitHub Actions"
           lerna version --conventional-commits --yes --git-tag-version
-          git push --follow-tags
-        
-
 
       - name: Publish Packages
         run: |
-          lerna publish from-git --yes
+          lerna publish from-git --no-private --yes
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 

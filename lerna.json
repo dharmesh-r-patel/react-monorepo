@@ -12,7 +12,8 @@
     "publish": {
       "conventionalCommits": true,
       "noGitTagVersion": true,
-      "yes": true
+      "yes": true,
+      "changelogPreset": "conventionalcommits"
     }
   }
 }

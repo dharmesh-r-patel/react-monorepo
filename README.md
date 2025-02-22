@@ -17,4 +17,6 @@ yarn workspaces list
 yarn install
 yarn build
 
+git pull origin main --rebase
+
 rm -rf yarn.lock .pnp.cjs .pnp.loader.mjs node_modules/ packages/*/node_modules packages/*/dist
