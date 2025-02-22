@@ -67,7 +67,7 @@ jobs:
       #     GH_TOKEN: ${{ secrets.GH_PAT }}
 
       - name: Publish Packages
-        run: lerna publish from-package --yes --loglevel verbose
+        run: lerna publish from-package --yes --force-publish  --loglevel verbose
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
