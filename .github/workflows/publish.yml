@@ -51,6 +51,11 @@ jobs:
             git config --global user.name "github-actions[bot]"
             git config --global user.email "github-actions[bot]@users.noreply.github.com"
             git remote set-url origin https://oauth2:${{ secrets.GH_PAT }}@github.com/dharmesh-r-patel/react-monorepo.git
+
+      - name: Test Git Authentication
+        run: |
+          git ls-remote https://x-access-token:${{ secrets.GH_PAT }}@github.com/dharmesh-r-patel/react-monorepo.git
+          
         
 
 
