@@ -1,6 +1,5 @@
 {
   "name": "@infineit/react-monorepo",
-  "private": false,
   "workspaces": [
     "packages/*"
   ],
