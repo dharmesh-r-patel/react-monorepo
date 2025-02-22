@@ -330,7 +330,6 @@ __metadata:
   dependencies:
     "@rollup/plugin-replace": "npm:^6.0.2"
     "@types/react": "npm:^19.0.8"
-    conventional-changelog-conventionalcommits: "npm:^8.0.0"
     lerna: "npm:^8.1.9"
     react: "npm:^19.0.0"
     react-dom: "npm:^19.0.0"
@@ -2196,15 +2195,6 @@ __metadata:
   dependencies:
     compare-func: "npm:^2.0.0"
   checksum: 10c0/90e73e25e224059b02951b6703b5f8742dc2a82c1fea62163978e6735fd3ab04350897a8fc6f443ec6b672d6b66e28a0820e833e544a0101f38879e5e6289b7e
-  languageName: node
-  linkType: hard
-
-"conventional-changelog-conventionalcommits@npm:^8.0.0":
-  version: 8.0.0
-  resolution: "conventional-changelog-conventionalcommits@npm:8.0.0"
-  dependencies:
-    compare-func: "npm:^2.0.0"
-  checksum: 10c0/368ee2245094579b38e1beac110577f75d82ab341d1bc6943052d5243f8bacc9ea08222a91a595a17f5f4ccc321b926211da00dd25b43877a3c51d8218bc76f0
   languageName: node
   linkType: hard
 

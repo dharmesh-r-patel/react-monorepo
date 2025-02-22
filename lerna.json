@@ -12,9 +12,7 @@
     "publish": {
       "conventionalCommits": true,
       "noGitTagVersion": true,
-      "yes": true,
-      "changelogPreset": "conventional-changelog-conventionalcommits"
-
+      "yes": true
     }
   }
 }
