@@ -45,26 +45,26 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Configure Git User
-        run: |
-          git config --global user.name "Dharmesh Patel"
-          git config --global user.email "dharmeshbbay@gmail.com"
-          git remote set-url --push origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/dharmesh-r-patel/react-monorepo.git
-          git fetch --tags
+      # - name: Configure Git User
+      #   run: |
+      #     git config --global user.name "Dharmesh Patel"
+      #     git config --global user.email "dharmeshbbay@gmail.com"
+      #     git remote set-url --push origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/dharmesh-r-patel/react-monorepo.git
+      #     git fetch --tags
 
-      - name: Bump version (if needed)
-        run: |
-          git fetch --tags
-          git fetch origin main
-          lerna version patch --yes --no-private
-        env:
-          GH_TOKEN: ${{ secrets.GH_PAT }}
+      # - name: Bump version (if needed)
+      #   run: |
+      #     git fetch --tags
+      #     git fetch origin main
+      #     lerna version patch --yes --no-private --force-publish --create-release github --conventional-commits
+      #   env:
+      #     GH_TOKEN: ${{ secrets.GH_PAT }}
 
-      - name: Push version updates
-        run: |
-          git push origin main --follow-tags
-        env:
-          GH_TOKEN: ${{ secrets.GH_PAT }}
+      # - name: Push version updates
+      #   run: |
+      #     git push origin main --follow-tags
+      #   env:
+      #     GH_TOKEN: ${{ secrets.GH_PAT }}
 
       - name: Publish Packages
         run: lerna publish from-package --yes --loglevel verbose
