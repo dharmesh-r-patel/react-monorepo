@@ -13,7 +13,8 @@
       "conventionalCommits": true,
       "noGitTagVersion": true,
       "yes": true,
-      "changelogPreset": "conventionalcommits"
+      "changelogPreset": "conventional-changelog-conventionalcommits"
+
     }
   }
 }
