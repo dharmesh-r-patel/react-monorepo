@@ -1,5 +1,5 @@
 {
-    "name": "@react-monorepo/button",
+    "name": "@infineit/react-button",
     "version": "1.0.0",
     "main": "dist/index.cjs.js",
     "module": "dist/index.esm.js",
