@@ -10,6 +10,6 @@ const useInput = (initialValue = '') => {
   return { value, onChange };
 };
 
-// change 1.1.0 ok
+// change 1.1.0 ok yes
 
 export default useInput;
