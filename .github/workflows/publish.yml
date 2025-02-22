@@ -56,7 +56,7 @@ jobs:
         run: |
           git fetch --tags
           git fetch origin main
-          lerna version patch --yes --no-private --force-publish 
+          lerna version patch --yes --no-private
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
 
