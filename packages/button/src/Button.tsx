@@ -10,5 +10,4 @@ const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
   return <MuiButton variant="contained" onClick={onClick}>{label}</MuiButton>;
 };
 
-// test yes
 export default Button;
