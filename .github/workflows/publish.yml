@@ -50,11 +50,16 @@ jobs:
             git config --global user.name "Dharmesh Patel"
             git config --global user.email "dharmeshbbay@gmail.com"      
             git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/dharmesh-r-patel/react-monorepo.git    
+            git fetch --unshallow
+     
 
       - name: Bump version (if needed)
         run: |
             git fetch --tags
-            lerna version patch --yes --no-private --force-publish
+            git fetch origin main
+            lerna version patch --yes --no-private --force-publish --create-release github
+        env:
+            GH_TOKEN: ${{ secrets.GH_PAT }}
 
       # - name: Bump version (if needed)
       #   run: lerna version patch --yes --no-private --force-publish
