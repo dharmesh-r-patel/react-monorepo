@@ -44,6 +44,11 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      - name: Bump version (if needed)
+        run: |
+            git fetch --tags
+            lerna version patch --yes --no-private --force-publish
+
       # - name: Bump version (if needed)
       #   run: lerna version patch --yes --no-private --force-publish
 
