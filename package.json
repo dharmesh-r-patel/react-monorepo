@@ -19,7 +19,6 @@
   "devDependencies": {
     "@rollup/plugin-replace": "^6.0.2",
     "@types/react": "^19.0.8",
-    "conventional-changelog-cli": "^5.0.0",
     "conventional-changelog-conventionalcommits": "^8.0.0",
     "lerna": "^8.1.9",
     "rollup-plugin-preserve-directives": "^0.4.0"
