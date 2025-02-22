@@ -49,7 +49,6 @@ jobs:
         run: |
           git config --global user.name "Dharmesh Patel"
           git config --global user.email "dharmeshbbay@gmail.com"
-          git remote set-url origin https://github.com/dharmesh-r-patel/react-monorepo.git
           git remote set-url --push origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/dharmesh-r-patel/react-monorepo.git
           git fetch --tags
 
@@ -57,7 +56,7 @@ jobs:
         run: |
           git fetch --tags
           git fetch origin main
-          lerna version patch --yes --no-private --force-publish --create-release github --conventional-commits
+          lerna version patch --yes --no-private --force-publish 
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
 
