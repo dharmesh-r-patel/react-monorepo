@@ -72,11 +72,12 @@ jobs:
 
       - name: Publish Packages
         run: |
-          lerna publish from-git --yes --loglevel verbose || (echo "Publish failed! Reverting..." && git reset --hard HEAD~1)
+          # lerna publish from-git --yes --loglevel verbose || (echo "Publish failed! Reverting..." && git reset --hard HEAD~1)
+          lerna publish from-package -y --no-verify-access
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-          
+
 # name: Publish Packages
 
 # on:

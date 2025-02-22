@@ -9,8 +9,11 @@
     "**/src/*.test.*"
   ],
   "command": {
-    "version": {
+    "publish": {
       "conventionalCommits": true
+    },
+    "version": {
+      "allowBranch": "main"
     }
   }
 }
