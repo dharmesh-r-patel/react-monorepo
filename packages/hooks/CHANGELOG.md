@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/dharmesh-r-patel/react-monorepo/compare/@infineit/react-hooks@1.5.0...@infineit/react-hooks@1.6.0) (2025-02-25)
+
+
+### Features
+
+* add user authentication module 2 ([3544499](https://github.com/dharmesh-r-patel/react-monorepo/commit/354449900ba5b27bec4d82545e3df769175f799f))
+
+
+
+
+
 # 1.5.0 (2025-02-25)
 
 
