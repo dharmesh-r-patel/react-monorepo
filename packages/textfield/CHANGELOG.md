@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/dharmesh-r-patel/react-monorepo/compare/@infineit/react-textfield@1.2.0...@infineit/react-textfield@1.3.0) (2025-02-25)
+
+
+### Features
+
+* add user authentication module 1 ([bf04f6a](https://github.com/dharmesh-r-patel/react-monorepo/commit/bf04f6a1bca2a9ed1195865055129952f4e139b3))
+
+
+
+
+
 # 1.2.0 (2025-02-25)
 
 
