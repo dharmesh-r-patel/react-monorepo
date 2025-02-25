@@ -1,12 +1,28 @@
 {
   "extends": "../../tsconfig.json",
+  "exclude": [
+    "node_modules",
+    "build",
+    "**/__tests__/*",
+    "jest.setup.tsx",
+    "dev",
+    "dev/examples.framer",
+    "test",
+    "skins",
+    "dist",
+    "temp",
+    "api",
+    "cypress"
+  ],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
   "compilerOptions": {
-    "outDir": "dist",
-    "declaration": false
-  },
-  "include": ["src/**/*"],
-  "exclude": ["../../node_modules", "src/**/*.test.tsx"]
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true
+  }
 }
+
+
 
 // {
 //     "compilerOptions": {
@@ -22,4 +38,3 @@
 //     },
 //     "include": ["src"]
 //   }
-  

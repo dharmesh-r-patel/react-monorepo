@@ -1,11 +1,13 @@
 import React from 'react';
 import { TextField as MuiTextField } from '@mui/material';
-import { useInput } from '@react-monorepo/hooks';  // Import the hook from hooks package
+import { useInput } from '@infineit/react-hooks';  // Import the hook from hooks package
 
 interface TextFieldProps {
   label: string;
   initialValue?: string;
 }
+
+console.log("Hooks Loaded:", typeof useInput);
 
 const TextField: React.FC<TextFieldProps> = ({ label, initialValue = '' }) => {
   const { value, onChange } = useInput(initialValue);  // Hook manages internal state

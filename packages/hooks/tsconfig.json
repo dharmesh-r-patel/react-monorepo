@@ -1,35 +1,12 @@
 {
   "extends": "../../tsconfig.json",
-  "exclude": [
-      "node_modules",
-      "build",
-      "**/__tests__/*",
-      "jest.setup.tsx",
-      "dev",
-      "types",
-      "dev/examples.framer",
-      "test",
-      "skins",
-      "dist",
-      "temp",
-      "api",
-      "cypress"
-  ],
   "compilerOptions": {
-  }
+    "outDir": "dist",
+    "declaration": false // ✅ Let Rollup handle declaration files
+    // "declaration": true,
+    // "declarationDir": "./dist/es",
+    // "emitDeclarationOnly": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["../../node_modules", "src/**/*.test.tsx"]
 }
-
-// {
-//   "compilerOptions": {
-//     "module": "ESNext",
-//     "target": "ESNext",
-//     "lib": ["DOM", "ESNext"],
-//     "jsx": "react-jsx",
-//     "declaration": true,
-//     "outDir": "dist",
-//     "moduleResolution": "Bundler",
-//     "esModuleInterop": true,
-//     "skipLibCheck": true
-//   },
-//   "include": ["src"]
-// }
